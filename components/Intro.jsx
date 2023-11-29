@@ -76,7 +76,7 @@ const Intro = ({ onExperienceClick, onProjectsClick }) => {
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.7 }}
-              href="https://github.com/yuukinaesa/"
+              href="https://www.github.com/yuukinaesa/"
               title="GitHub"
               target="_blank"
             >
@@ -102,7 +102,7 @@ const Intro = ({ onExperienceClick, onProjectsClick }) => {
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.9 }}
-              href="https://facebook.com/yuukinaesa/"
+              href="https://www.facebook.com/yuukinaesa/"
               title="Facebook"
               target="_blank"
             >
@@ -115,7 +115,7 @@ const Intro = ({ onExperienceClick, onProjectsClick }) => {
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 1 }}
-              href="https://instagram.com/yuukinaesa/"
+              href="https://www.instagram.com/yuukinaesa/"
               title="Instagram"
               target="_blank"
             >
