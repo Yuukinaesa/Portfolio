@@ -18,7 +18,7 @@ const Intro = ({ onExperienceClick, onProjectsClick }) => {
         <ul className="">
           <li>
             <a
-              href="https://drive.google.com/file/d/1Rxk2ORIkSYGvdcUm3N3h8lGgjnZt-PBJ/view?usp=drive_link" 
+              href="https://drive.google.com/file/d/1QxM0yvbtU6Sa4mOp65mRgTSvhpMtVRKx/view?usp=sharing"
               target="_blank"
             >
               <motion.button
