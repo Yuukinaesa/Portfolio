@@ -14,7 +14,6 @@ const Footer = () => {
         >
           Arfan Hidayat Priyantono
         </a>
-        .
       </span>
     </div>
   );
