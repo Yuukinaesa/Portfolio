@@ -44,6 +44,12 @@ const Experience = () => {
         Experience
       </h3>
       <div className="grid grid-cols-1 lg:ml-96">
+      <ExperienceItem
+          name="PT Info Solusindo Data Utama (Info Data)"
+          url="https://idsolusi.com/en/"
+          position="Mobile Security - Engineer"
+          date="Jan 2024 - Present"
+        />
         <ExperienceItem
           name="PT GoTo Gojek Tokopedia Tbk (GoTo Impact Foundation)"
           url="https://www.gotocompany.com/"
