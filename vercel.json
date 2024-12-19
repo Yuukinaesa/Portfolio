@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/saham",
+      "destination": "https://idx.streamlit.app",
+      "permanent": true
+    }
+  ]
+}
