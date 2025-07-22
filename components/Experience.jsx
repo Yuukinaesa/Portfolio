@@ -1,9 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const ExperienceItem = ({ name, url, position, date, foundationUrl }) => {
-  const [mainName, subName] = name.split(" (");
-
+const ExperienceItem = ({ name, url, position, date }) => {
   return (
     <div className="flex justify-between lg:px-10 mb-6">
       <div className="flex flex-col">
@@ -12,17 +10,8 @@ const ExperienceItem = ({ name, url, position, date, foundationUrl }) => {
           target="_blank"
           className="text-base font-medium text-primary tracking-wide hover:text-sky"
         >
-          {mainName}
+          {name}
         </a>
-        {subName && (
-          <span>
-            (
-            <a href={foundationUrl || url} target="_blank" className="text-primary tracking-wide hover:text-sky">
-              {subName.replace(")", "")}
-            </a>
-            )
-          </span>
-        )}
         <span className="text-base text-semidark">{position}</span>
       </div>
       <div className="flex flex-col text-right mt-1">
@@ -53,7 +42,6 @@ const Experience = () => {
         <ExperienceItem
           name="PT GoTo Gojek Tokopedia Tbk (GoTo Impact Foundation)"
           url="https://www.gotocompany.com/"
-          foundationUrl="https://www.goto-impact.org/"
           position="Data Analyst"
           date="Jul 2023 - Dec 2023"
         />

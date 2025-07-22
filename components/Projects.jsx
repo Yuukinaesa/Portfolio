@@ -9,6 +9,8 @@ import {
   landmarkstreamlit,
   rocus,
   cybersec,
+  saham,
+  vesttrack,
 } from "@/public/assets/";
 
 const ProjectCard = ({ imageSrc, title, description, link, tags }) => {
@@ -49,6 +51,20 @@ const ProjectCard = ({ imageSrc, title, description, link, tags }) => {
 
 const Projects = () => {
   const projects = [
+    {
+      imageSrc: saham,
+      title: "Saham IDX",
+      description: "Stock analysis and portfolio management tool.",
+      link: "https://sahamidx.streamlit.app/",
+      tags: ["Finance", "Stocks", "Analysis"],
+    },
+    {
+      imageSrc: vesttrack,
+      title: "VestTrack",
+      description: "Investment tracking and analytics platform.",
+      link: "https://vesttrack.arfan.biz.id/",
+      tags: ["Investment", "Tracking", "Analytics"],
+    },
     {
       imageSrc: analisisjakarta,
       title: "Education Analysis Jakarta",
