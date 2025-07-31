@@ -10,7 +10,7 @@ import {
   rocus,
   cybersec,
   saham,
-  vesttrack,
+  portsyncro,
 } from "@/public/assets/";
 
 const ProjectCard = ({ imageSrc, title, description, link, tags }) => {
@@ -53,17 +53,17 @@ const Projects = () => {
   const projects = [
     {
       imageSrc: saham,
-      title: "Saham IDX",
+      title: "Saham IDX (under development)",
       description: "Stock analysis and portfolio management tool.",
       link: "https://sahamidx.streamlit.app/",
-      tags: ["Finance", "Stocks", "Analysis"],
+      tags: ["Screener", "Saham", "Calculator"],
     },
     {
-      imageSrc: vesttrack,
-      title: "VestTrack",
-      description: "Investment tracking and analytics platform.",
-      link: "https://vesttrack.arfan.biz.id/",
-      tags: ["Investment", "Tracking", "Analytics"],
+      imageSrc: portsyncro,
+      title: "PortSyncro",
+      description: "Easy portfolio synchronization for cryptocurrencies and stocks. Track Indonesian stocks, crypto investments, calculate average prices, and manage your portfolio with beautiful UI.",
+      link: "https://portsyncro.arfan.biz.id/",
+      tags: ["Portfolio-Management", ,"Real-Time", "Stocks", "Crypto"],
     },
     {
       imageSrc: analisisjakarta,

@@ -5,5 +5,5 @@ import landmarkstreamlit from "./img/projects/landmarkstreamlit.png";
 import rocus from "./img/projects/rocus.png";
 import cybersec from "./img/projects/cybersec.jpg";
 import saham from "./img/projects/saham.png";
-import vesttrack from "./img/projects/vesttrack.png";
-export { analisisjakarta, webanalisisjakarta, landmarkjupyter, landmarkstreamlit, rocus, cybersec, saham, vesttrack };
+import portsyncro from "./img/projects/portsyncro.png";
+export { analisisjakarta, webanalisisjakarta, landmarkjupyter, landmarkstreamlit, rocus, cybersec, saham, portsyncro };
