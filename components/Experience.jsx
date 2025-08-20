@@ -37,7 +37,7 @@ const Experience = () => {
           name="PT Info Solusindo Data Utama (Info Data)"
           url="https://idsolusi.com/en/"
           position="Mobile Security - Engineer"
-          date="Jan 2024 - Present"
+          date="Jan 2024 - Aug 2025"
         />
         <ExperienceItem
           name="PT GoTo Gojek Tokopedia Tbk (GoTo Impact Foundation)"

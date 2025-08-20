@@ -54,7 +54,7 @@ const Projects = () => {
     {
       imageSrc: saham,
       title: "Saham IDX (under development)",
-      description: "Stock analysis and portfolio management tool.",
+      description: "under development.",
       link: "https://sahamidx.streamlit.app/",
       tags: ["Screener", "Saham", "Calculator"],
     },
