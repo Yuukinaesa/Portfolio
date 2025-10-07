@@ -64,7 +64,7 @@ const Experience = () => {
           date="Jan 2017 - Feb 2017"
         />
         <ExperienceItem
-          name="Xiaomi Corporation"
+          name="Xiaomi Corporation | Internship"
           url="http://en.miui.com/forum.php"
           position="MIUI Beta Team"
           date="Jan 2016 - Dec 2016"
