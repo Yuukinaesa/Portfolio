@@ -40,25 +40,25 @@ const Experience = () => {
           date="Jan 2024 - Aug 2025"
         />
         <ExperienceItem
-          name="PT GoTo Gojek Tokopedia Tbk (GoTo Impact Foundation)"
+          name="PT. GoTo Gojek Tokopedia Tbk | Internship"
           url="https://www.gotocompany.com/"
           position="Data Analyst"
           date="Jul 2023 - Dec 2023"
         />
         <ExperienceItem
-          name="PT Karoten Asia Pasifik (Carrot Academy)"
+          name="PT. Karoten Asia Pasifik | Internship"
           url="https://www.carrotacademy.com/"
           position="Data Entry"
           date="Dec 2022 - Jan 2023"
         />
         <ExperienceItem
-          name="Kementerian Komunikasi dan Informatika RI (KOMINFO)"
+          name="Kementerian Komunikasi dan Informatika RI | Internship"
           url="https://www.kominfo.go.id/"
           position="Cyber Security Analyst"
           date="Aug 2022 - Dec 2022"
         />
         <ExperienceItem
-          name="PT Telekomunikasi Indonesia Tbk (Telkom Indonesia)"
+          name="PT. Telekomunikasi Indonesia Tbk | Internship"
           url="https://www.telkom.co.id/"
           position="Customer Service Representative"
           date="Jan 2017 - Feb 2017"
