@@ -59,7 +59,7 @@ const Intro = ({ onExperienceClick, onProjectsClick }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              href="https://drive.google.com/file/d/1RvJVBLd-Y-1mPPmylmYiTjBXSisPXVxe/view?usp=sharing"
+              href="https://drive.google.com/file/d/17H2dDozpDSjqQbGKWo8s-1VxH7Ou0EP0/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-transparent text-primary font-medium text-sm px-4 py-2.5 rounded-md hover:bg-sky hover:border-sky hover:text-white focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-slate-900 inline-block transition-colors duration-200"
