@@ -4,14 +4,30 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet"
-        />
+        {/* Security: CSP delivered via HTTP headers in next.config.js & vercel.json */}
+        {/* Removed duplicate CSP meta tag — HTTP headers take precedence and
+            duplicate policies cause browser confusion (OWASP A05:2021) */}
+
+        {/* Security headers via meta tags (fallback for non-header environments) */}
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+        {/* Theme & PWA */}
+        <meta name="theme-color" content="#0f172a" />
+        <meta name="color-scheme" content="dark" />
+        <link rel="manifest" href="/manifest.json" />
+
+        {/* Preconnect for performance */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       </Head>
       <body>
+        {/* Accessibility: Skip to main content link (WCAG 2.1 — SC 2.4.1) */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-sky focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded-md focus:font-medium focus:text-sm"
+        >
+          Skip to main content
+        </a>
         <Main />
         <NextScript />
       </body>

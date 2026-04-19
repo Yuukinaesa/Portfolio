@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "Arfan Hidayat Priyantono — Portfolio",
+  "short_name": "Arfan Portfolio",
+  "description": "Personal portfolio of Arfan Hidayat Priyantono — Cyber Security Engineer who builds automation tools to streamline team workflows.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["portfolio", "personal"],
+  "lang": "en",
+  "dir": "ltr"
+}

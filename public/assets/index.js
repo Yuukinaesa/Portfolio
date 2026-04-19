@@ -6,4 +6,7 @@ import rocus from "./img/projects/rocus.png";
 import cybersec from "./img/projects/cybersec.jpg";
 import saham from "./img/projects/saham.png";
 import portsyncro from "./img/projects/portsyncro.png";
-export { analisisjakarta, webanalisisjakarta, landmarkjupyter, landmarkstreamlit, rocus, cybersec, saham, portsyncro };
+import botpam from "./img/projects/BotRequestPAM.png";
+import ansible from "./img/projects/Ansible.png";
+import mytools from "./img/projects/MyTools.png";
+export { analisisjakarta, webanalisisjakarta, landmarkjupyter, landmarkstreamlit, rocus, cybersec, saham, portsyncro, botpam, ansible, mytools };

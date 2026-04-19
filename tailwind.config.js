@@ -1,12 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
   ],
   theme: {
     extend: {
@@ -24,13 +20,14 @@ module.exports = {
         xl: "1280px",
       },
       fontFamily: {
-        body: ["Inter", "sans-serif"],
-        title: ["Poppins", "sans-serif"],
+        body: ["var(--font-inter)", "Inter", "sans-serif"],
+        title: ["var(--font-poppins)", "Poppins", "sans-serif"],
       },
       colors: {
         sky: "#38bdf8",
         primary: "#e2e8f0",
         semidark: "#94a3b8",
+        dark: "#64748b",
       },
     },
   },
