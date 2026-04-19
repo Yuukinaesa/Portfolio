@@ -24,7 +24,7 @@ const EXPERIENCES = [
     id: "goto",
     name: "PT. GoTo Gojek Tokopedia Tbk",
     url: "https://www.gotocompany.com/",
-    position: "Data Analyst — Internship",
+    position: "Data Analyst — Apprenticeship",
     date: "Jul 2023 — Dec 2023",
     dateStart: "2023-07",
     dateEnd: "2023-12",
