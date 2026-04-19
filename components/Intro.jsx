@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { FiInstagram, FiFacebook, FiLinkedin, FiGithub } from "react-icons/fi";
 
 const SOCIAL_LINKS = [

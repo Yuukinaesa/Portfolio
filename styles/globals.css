@@ -1,11 +1,37 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* === Tailwind v4: CSS-first theme configuration === */
+/* Replaces tailwind.config.js — all tokens defined here */
+@theme {
+  /* Custom breakpoints */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 375px;
+  --breakpoint-md: 667px;
+  --breakpoint-lg: 960px;
+  --breakpoint-xl: 1280px;
+
+  /* Max-width tokens */
+  --container-max: 1440px;
+  --width-container-small: 1024px;
+  --width-content-container: 1140px;
+  --width-container-xs: 768px;
+
+  /* Custom colors */
+  --color-sky: #38bdf8;
+  --color-primary: #e2e8f0;
+  --color-semidark: #94a3b8;
+  --color-dark: #64748b;
+
+  /* Font families */
+  --font-body: var(--font-inter), "Inter", sans-serif;
+  --font-title: var(--font-poppins), "Poppins", sans-serif;
+}
 
 /* Smooth scrolling for the whole page */
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 2rem;
 }
 
 /* Improve text rendering */
@@ -56,7 +82,19 @@ body {
   border-width: 0;
 }
 
-/* Scroll padding for anchor navigation so headers aren't hidden under nav */
-html {
-  scroll-padding-top: 2rem;
+/* Custom max-width utilities for Tailwind v4 */
+@utility max-w-containerSmall {
+  max-width: var(--width-container-small);
+}
+
+@utility max-w-container {
+  max-width: var(--container-max);
+}
+
+@utility max-w-contentContainer {
+  max-width: var(--width-content-container);
+}
+
+@utility max-w-containerxs {
+  max-width: var(--width-container-xs);
 }
