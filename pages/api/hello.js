@@ -1,3 +1,5 @@
+import { logger } from "../../lib/logger.js";
+
 // Next.js API route: Health check endpoint
 
 /**
@@ -14,23 +16,31 @@
  * @param {import('next').NextApiResponse} res - The server response
  */
 export default function handler(req, res) {
-  // Only allow GET requests (OWASP: Restrict HTTP methods)
-  if (req.method !== "GET") {
-    res.setHeader("Allow", "GET");
+  try {
+    // Only allow GET requests (OWASP: Restrict HTTP methods)
+    if (req.method !== "GET") {
+      res.setHeader("Allow", "GET");
+      res.setHeader("X-Content-Type-Options", "nosniff");
+      logger.warn("Method Not Allowed attempt on /api/hello", { method: req.method });
+      return res.status(405).json({ error: "Method Not Allowed" });
+    }
+
+    // Security headers
+    res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
     res.setHeader("X-Content-Type-Options", "nosniff");
-    return res.status(405).json({ error: "Method Not Allowed" });
+    res.setHeader("Content-Type", "application/json; charset=utf-8");
+
+    // Prevent information leakage — no server fingerprinting
+    res.setHeader("X-Powered-By", "");
+
+    logger.info("Health check endpoint invoked successfully");
+
+    return res.status(200).json({
+      status: "ok",
+      timestamp: new Date().toISOString(),
+    });
+  } catch (error) {
+    logger.error("Unhandled exception in /api/hello", { error });
+    return res.status(500).json({ error: "Internal Server Error" });
   }
-
-  // Security headers
-  res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
-  res.setHeader("X-Content-Type-Options", "nosniff");
-  res.setHeader("Content-Type", "application/json; charset=utf-8");
-
-  // Prevent information leakage — no server fingerprinting
-  res.setHeader("X-Powered-By", "");
-
-  res.status(200).json({
-    status: "ok",
-    timestamp: new Date().toISOString(),
-  });
 }

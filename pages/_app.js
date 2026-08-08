@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import Head from "next/head";
 import { Inter, Poppins } from "next/font/google";
 import React from "react";
+import { logger } from "../lib/logger.js";
 
 // next/font: Self-hosted, zero layout shift, no render-blocking external CSS
 const inter = Inter({
@@ -33,11 +34,10 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    // Production: errors logged silently (no console in prod)
-    if (process.env.NODE_ENV === "development") {
-      // eslint-disable-next-line no-console
-      console.error("ErrorBoundary caught:", error, errorInfo);
-    }
+    logger.error("Global ErrorBoundary caught unhandled render error", {
+      error,
+      componentStack: errorInfo?.componentStack,
+    });
   }
 
   render() {

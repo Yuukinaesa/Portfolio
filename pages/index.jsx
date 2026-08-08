@@ -64,6 +64,49 @@ export default function Home() {
 
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://arfan.biz.id/" />
+
+        {/* Schema.org Structured Data (JSON-LD) for SEO / Knowledge Graph */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  "@id": "https://arfan.biz.id/#person",
+                  "name": "Arfan Hidayat Priyantono",
+                  "alternateName": "Yuukinaesa",
+                  "jobTitle": "Cyber Security Engineer",
+                  "url": "https://arfan.biz.id/",
+                  "sameAs": [
+                    "https://www.github.com/yuukinaesa/",
+                    "https://www.linkedin.com/in/yuukinaesa/",
+                    "https://www.facebook.com/yuukinaesa/",
+                    "https://www.instagram.com/yuukinaesa/"
+                  ],
+                  "knowsAbout": [
+                    "Cyber Security",
+                    "Vulnerability Management",
+                    "OS Hardening",
+                    "Automation Tools",
+                    "Python",
+                    "Mobile Security"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://arfan.biz.id/#website",
+                  "url": "https://arfan.biz.id/",
+                  "name": "Arfan Hidayat Priyantono — Portfolio",
+                  "publisher": {
+                    "@id": "https://arfan.biz.id/#person"
+                  }
+                }
+              ]
+            })
+          }}
+        />
       </Head>
 
       <main
