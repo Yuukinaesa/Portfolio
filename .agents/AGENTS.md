@@ -1,7 +1,10 @@
-# Workspace Agentic Rules — Mandatory MCP Protocol
+# Workspace Agentic Rules — Mandatory MCP & Adaptive Execution Protocol
 
-## ⚡ MANDATORY AUTOMATIC MCP INTEGRATION
-- **Memory MCP**: Automatically persist all repository architecture, code mutations, dependency decisions, and test specifications into the persistent memory graph (`memory` server) on every session.
-- **CodeGraph MCP**: Map codebase AST, symbols, and cross-file import dependencies (`codegraph` server) before executing architectural refactors.
-- **Context7 MCP**: Fetch live, version-accurate documentation for external frameworks and libraries (`context7` server).
-- **Sequential Thinking MCP**: Execute step-by-step analytical reasoning (`sequential-thinking` server) for complex multi-module engineering tasks.
+## ⚡ MANDATORY AUTO-APPLIED MCP & ADAPTIVE PROTOCOL
+- **Universal Auto-Application**: These rules automatically apply to this repository and all future sessions.
+- **Auto-Run MCP Tools on Every Code Change**:
+  1. **Memory MCP** (`memory`): Automatically persist repository architecture, security hardening, dependency updates, and code mutations into the knowledge graph (`create_entities`, `add_observations`) on every session and after every change.
+  2. **CodeGraph MCP** (`codegraph`): Automatically resolve codebase AST, symbol references, function callers/callees, and file import graphs before making code modifications.
+  3. **Context7 MCP** (`context7`): Automatically fetch live, version-accurate documentation whenever working with external frameworks, SDKs, or libraries.
+  4. **Sequential Thinking MCP** (`sequential-thinking`): Automatically execute step-by-step reasoning for multi-file refactoring, debugging, and architectural changes.
+- **Dynamic Adaptivity**: Dynamically infer project conventions, runtime environments, framework versions, styling engines, and domain constraints before executing any code changes.
