@@ -6,7 +6,7 @@ const EXPERIENCES = [
     id: "sdd",
     name: "PT. Swadharma Duta Data",
     url: "https://www.sdd.co.id/",
-    position: "Vulnerability Management, OS Hardening & Patch Management — Full-Time",
+    position: "(Senior) Vulnerability Management, OS Hardening & Patch Management",
     date: "Oct 2025 — Present",
     dateStart: "2025-10",
     dateEnd: "",

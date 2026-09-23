@@ -14,9 +14,29 @@ import {
   botpam,
   ansible,
   mytools,
+  automatetanium,
+  snappatch,
 } from "@/public/assets/";
 
 const PROJECTS = [
+  {
+    id: "automatetanium",
+    imageSrc: automatetanium,
+    title: "AutomateTanium",
+    description:
+      "Developed an automation tool to streamline Tanium queries, deployments, and audit evidence.",
+    link: "#",
+    tags: ["Automation", "Tanium", "Python", "Audit"],
+  },
+  {
+    id: "snappatch",
+    imageSrc: snappatch,
+    title: "SnapPatch",
+    description:
+      "Built a tool to automate vulnerability log parsing, patch downloads, and evidence reporting.",
+    link: "#",
+    tags: ["Automation", "Vulnerability", "Patch Management", "Python"],
+  },
   {
     id: "ansible-log-parser",
     imageSrc: ansible,
@@ -136,19 +156,25 @@ const ProjectCard = ({ id, imageSrc, title, description, link, tags }) => {
             placeholder="blur"
             sizes="(max-width: 667px) 100vw, (max-width: 960px) 176px, 128px"
           />
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group md:ml-4 mb-2 text-base font-medium font-title text-primary hover:text-sky focus:outline-none focus:ring-2 focus:ring-sky rounded"
-            aria-label={`View ${title} project (opens in new tab)`}
-          >
-            {title}{" "}
-            <FiArrowUpRight
-              className="inline-flex transition group-hover:-translate-y-1"
-              aria-hidden="true"
-            />
-          </a>
+          {link && link !== "#" ? (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group md:ml-4 mb-2 text-base font-medium font-title text-primary hover:text-sky focus:outline-none focus:ring-2 focus:ring-sky rounded"
+              aria-label={`View ${title} project (opens in new tab)`}
+            >
+              {title}{" "}
+              <FiArrowUpRight
+                className="inline-flex transition group-hover:-translate-y-1"
+                aria-hidden="true"
+              />
+            </a>
+          ) : (
+            <span className="md:ml-4 mb-2 text-base font-medium font-title text-primary">
+              {title}
+            </span>
+          )}
         </div>
         <p className="mb-4 mt-2 md:mt-0 text-sm md:text-md text-semidark">
           {description}
