@@ -26,7 +26,7 @@ const PROJECTS = [
     description:
       "Developed an automation tool to streamline Tanium queries, deployments, and audit evidence.",
     link: "#",
-    tags: ["Automation", "Tanium", "Python", "Audit"],
+    tags: ["Automation", "Tanium", "Node.js", "Audit"],
   },
   {
     id: "snappatch",
@@ -35,7 +35,7 @@ const PROJECTS = [
     description:
       "Built a tool to automate vulnerability log parsing, patch downloads, and evidence reporting.",
     link: "#",
-    tags: ["Automation", "Vulnerability", "Patch Management", "Python"],
+    tags: ["Vulnerability", "Patch Management", "Python"],
   },
   {
     id: "ansible-log-parser",
