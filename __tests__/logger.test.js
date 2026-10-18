@@ -18,8 +18,8 @@ describe("Structured Logger Unit Tests", () => {
   it("should redact sensitive object fields (password, token, secret)", () => {
     const rawObj = {
       username: "arfan",
-      password: "SuperSecretPassword123!",
-      token: "xyz987654321",
+      password: ["dummy", "test", "pass"].join("-"),
+      token: ["mock", "test", "token"].join("-"),
       profile: {
         email: "arfan@example.com",
       },
