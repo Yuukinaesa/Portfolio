@@ -40,4 +40,18 @@ describe("Structured Logger Unit Tests", () => {
     assert.strictEqual(parsed.meta.key, "value");
     assert.ok(parsed.timestamp);
   });
+
+  it("should correctly serialize Date instances to ISO strings", () => {
+    const testDate = new Date("2026-09-23T12:00:00.000Z");
+    const sanitized = logger.sanitize({ created: testDate });
+    assert.strictEqual(sanitized.created, "2026-09-23T12:00:00.000Z");
+  });
+
+  it("should handle circular object references gracefully without stack overflow", () => {
+    const circularObj = { name: "test-cycle" };
+    circularObj.self = circularObj;
+    const sanitized = logger.sanitize(circularObj);
+    assert.strictEqual(sanitized.name, "test-cycle");
+    assert.strictEqual(sanitized.self, "[CIRCULAR]");
+  });
 });

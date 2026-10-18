@@ -88,9 +88,11 @@ export default function Home() {
                   "knowsAbout": [
                     "Cyber Security",
                     "Vulnerability Management",
+                    "Patch Management",
                     "OS Hardening",
                     "Automation Tools",
                     "Python",
+                    "Node.js",
                     "Mobile Security"
                   ]
                 },
