@@ -16,9 +16,6 @@ export default function Document() {
         <meta name="theme-color" content="#0f172a" />
         <meta name="color-scheme" content="dark" />
         <link rel="manifest" href="/manifest.json" />
-
-        {/* Preconnect for performance */}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       </Head>
       <body>
         {/* Accessibility: Skip to main content link (WCAG 2.1 — SC 2.4.1) */}

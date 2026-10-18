@@ -17,7 +17,10 @@ export default function Custom404() {
         className="bg-slate-900 min-h-screen flex flex-col items-center justify-center font-body text-primary px-4"
         role="main"
       >
-        <h1 className="text-6xl md:text-8xl font-title font-bold text-sky mb-4">
+        <h1
+          className="text-6xl md:text-8xl font-title font-bold text-sky mb-4"
+          aria-label="Error 404: Page Not Found"
+        >
           404
         </h1>
         <p className="text-lg md:text-xl text-semidark mb-8 text-center max-w-md">

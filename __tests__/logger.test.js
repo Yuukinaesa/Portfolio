@@ -54,4 +54,10 @@ describe("Structured Logger Unit Tests", () => {
     assert.strictEqual(sanitized.name, "test-cycle");
     assert.strictEqual(sanitized.self, "[CIRCULAR]");
   });
+
+  it("should serialize BigInt values to string without throwing serialization TypeError", () => {
+    const raw = { balance: 1000000000000000000n };
+    const sanitized = logger.sanitize(raw);
+    assert.strictEqual(sanitized.balance, "1000000000000000000");
+  });
 });

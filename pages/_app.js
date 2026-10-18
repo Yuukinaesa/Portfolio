@@ -53,13 +53,26 @@ class ErrorBoundary extends React.Component {
           <p className="text-lg text-semidark mb-8 text-center max-w-md">
             An unexpected error occurred. Please refresh the page.
           </p>
-          <button
-            onClick={() => this.setState({ hasError: false })}
-            className="bg-transparent border border-sky text-sky font-medium text-sm px-6 py-3 rounded-md hover:bg-sky hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-slate-900"
-            type="button"
-          >
-            Try Again
-          </button>
+          <div className="flex gap-4">
+            <button
+              onClick={() => this.setState({ hasError: false })}
+              className="bg-transparent border border-sky text-sky font-medium text-sm px-6 py-3 rounded-md hover:bg-sky hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-slate-900 cursor-pointer"
+              type="button"
+            >
+              Try Again
+            </button>
+            <button
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.location.reload();
+                }
+              }}
+              className="bg-sky text-slate-900 font-medium text-sm px-6 py-3 rounded-md hover:bg-sky/90 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-slate-900 cursor-pointer"
+              type="button"
+            >
+              Reload Page
+            </button>
+          </div>
         </main>
       );
     }
