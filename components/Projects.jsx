@@ -138,7 +138,7 @@ const PROJECTS = [
   },
 ];
 
-const ProjectCard = ({ id, imageSrc, title, description, link, tags }) => {
+const ProjectCard = ({ id, imageSrc, title, description, link, tags = [] }) => {
   return (
     <article
       id={`project-${id}`}

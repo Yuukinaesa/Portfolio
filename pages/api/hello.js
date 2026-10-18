@@ -17,9 +17,9 @@ import { logger } from "../../lib/logger.js";
  */
 export default function handler(req, res) {
   try {
-    // Only allow GET requests (OWASP: Restrict HTTP methods)
-    if (req.method !== "GET") {
-      res.setHeader("Allow", "GET");
+    // Only allow GET and HEAD requests (OWASP: Restrict HTTP methods, RFC 9110)
+    if (req.method !== "GET" && req.method !== "HEAD") {
+      res.setHeader("Allow", "GET, HEAD");
       res.setHeader("X-Content-Type-Options", "nosniff");
       logger.warn("Method Not Allowed attempt on /api/hello", { method: req.method });
       return res.status(405).json({ error: "Method Not Allowed" });
@@ -32,6 +32,11 @@ export default function handler(req, res) {
 
     // Prevent information leakage — no server fingerprinting
     res.setHeader("X-Powered-By", "");
+
+    // RFC 9110: HEAD requests must return identical headers without a message body
+    if (req.method === "HEAD") {
+      return res.status(200).end();
+    }
 
     logger.info("Health check endpoint invoked successfully");
 

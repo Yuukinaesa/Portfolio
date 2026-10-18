@@ -44,9 +44,15 @@ const Intro = ({ onExperienceClick, onProjectsClick }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
-          className="text-sm md:text-base uppercase font-title font-semibold tracking-wider text-primary hover:text-sky"
-          href="/"
-          aria-label="Yuukinaesa — Home"
+          className="text-sm md:text-base uppercase font-title font-semibold tracking-wider text-primary hover:text-sky cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky rounded"
+          href="#top"
+          onClick={(e) => {
+            e.preventDefault();
+            if (typeof window !== "undefined") {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+          aria-label="Yuukinaesa — Back to top"
         >
           Yuukinaesa
         </motion.a>

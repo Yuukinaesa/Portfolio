@@ -65,15 +65,21 @@ const ExperienceItem = ({ id, name, url, position, date, dateStart, dateEnd }) =
       className="flex justify-between lg:px-10 mb-6"
     >
       <div className="flex flex-col">
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-base font-medium text-primary tracking-wide hover:text-sky focus:outline-none focus:ring-2 focus:ring-sky rounded"
-          aria-label={`Visit ${name} website (opens in new tab)`}
-        >
-          {name}
-        </a>
+        {url && url !== "#" ? (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-base font-medium text-primary tracking-wide hover:text-sky focus:outline-none focus:ring-2 focus:ring-sky rounded"
+            aria-label={`Visit ${name} website (opens in new tab)`}
+          >
+            {name}
+          </a>
+        ) : (
+          <span className="text-base font-medium text-primary tracking-wide">
+            {name}
+          </span>
+        )}
         <span className="text-base text-semidark">{position}</span>
       </div>
       <div className="flex flex-col text-right mt-1 flex-shrink-0 ml-4">
