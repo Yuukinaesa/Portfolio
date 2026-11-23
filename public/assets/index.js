@@ -7,7 +7,6 @@ import cybersec from "./img/projects/cybersec.jpg";
 import saham from "./img/projects/saham.png";
 import portsyncro from "./img/projects/portsyncro.png";
 import botpam from "./img/projects/BotRequestPAM.png";
-import ansible from "./img/projects/Ansible.png";
 import mytools from "./img/projects/MyTools.png";
 import automatetanium from "./img/projects/AutomateTanium.png";
 import snappatch from "./img/projects/SnapPatch.png";
@@ -22,7 +21,6 @@ export {
   saham,
   portsyncro,
   botpam,
-  ansible,
   mytools,
   automatetanium,
   snappatch,

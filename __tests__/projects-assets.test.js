@@ -31,6 +31,11 @@ describe("Project Assets and Configuration Tests", () => {
     );
     assert.ok(content.includes("automatetanium,"), "Should export automatetanium");
     assert.ok(content.includes("snappatch,"), "Should export snappatch");
+    assert.strictEqual(
+      content.includes("ansible"),
+      false,
+      "Should not export unused ansible asset in assets/index.js"
+    );
   });
 
   it("should include AutomateTanium and SnapPatch in components/Projects.jsx", () => {
