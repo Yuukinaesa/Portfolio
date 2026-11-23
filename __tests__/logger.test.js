@@ -80,4 +80,35 @@ describe("Structured Logger Unit Tests", () => {
     const sanitized = logger.sanitize(raw);
     assert.strictEqual(sanitized.balance, "1000000000000000000");
   });
+
+  it("should sanitize Error instances and their cause chains", () => {
+    const rootError = new Error("Database connection refused for user admin@test.com");
+    const appError = new Error("Service initialization failed", { cause: rootError });
+    const sanitized = logger.sanitize(appError);
+
+    assert.strictEqual(sanitized.name, "Error");
+    assert.strictEqual(sanitized.message, "Service initialization failed");
+    assert.ok(sanitized.cause);
+    assert.strictEqual(
+      sanitized.cause.message,
+      "Database connection refused for user [REDACTED_EMAIL]"
+    );
+  });
+
+  it("should serialize and sanitize Set and Map collections without data loss", () => {
+    const roleSet = new Set(["admin", "user@test.com"]);
+    const configMap = new Map([
+      ["host", "localhost"],
+      ["adminEmail", "admin@test.com"],
+    ]);
+
+    const sanitizedSet = logger.sanitize(roleSet);
+    assert.deepStrictEqual(sanitizedSet, ["admin", "[REDACTED_EMAIL]"]);
+
+    const sanitizedMap = logger.sanitize(configMap);
+    assert.deepStrictEqual(sanitizedMap, {
+      host: "localhost",
+      adminEmail: "[REDACTED_EMAIL]",
+    });
+  });
 });
