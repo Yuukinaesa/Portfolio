@@ -49,7 +49,8 @@ const Intro = ({ onExperienceClick, onProjectsClick }) => {
           onClick={(e) => {
             e.preventDefault();
             if (typeof window !== "undefined") {
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+              window.scrollTo({ top: 0, behavior: prefersReduced ? "auto" : "smooth" });
             }
           }}
           aria-label="Yuukinaesa — Back to top"

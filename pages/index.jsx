@@ -9,12 +9,19 @@ export default function Home() {
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
 
+  const getScrollBehavior = () => {
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return "auto";
+    }
+    return "smooth";
+  };
+
   const scrollToExperience = () => {
-    experienceRef.current?.scrollIntoView({ behavior: "smooth" });
+    experienceRef.current?.scrollIntoView({ behavior: getScrollBehavior() });
   };
 
   const scrollToProjects = () => {
-    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+    projectsRef.current?.scrollIntoView({ behavior: getScrollBehavior() });
   };
 
   return (

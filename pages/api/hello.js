@@ -17,9 +17,17 @@ import { logger } from "../../lib/logger.js";
  */
 export default function handler(req, res) {
   try {
+    // RFC 9110: OPTIONS request for preflight / method discovery
+    if (req.method === "OPTIONS") {
+      res.setHeader("Allow", "GET, HEAD, OPTIONS");
+      res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
+      res.setHeader("X-Content-Type-Options", "nosniff");
+      return res.status(204).end();
+    }
+
     // Only allow GET and HEAD requests (OWASP: Restrict HTTP methods, RFC 9110)
     if (req.method !== "GET" && req.method !== "HEAD") {
-      res.setHeader("Allow", "GET, HEAD");
+      res.setHeader("Allow", "GET, HEAD, OPTIONS");
       res.setHeader("X-Content-Type-Options", "nosniff");
       logger.warn("Method Not Allowed attempt on /api/hello", { method: req.method });
       return res.status(405).json({ error: "Method Not Allowed" });

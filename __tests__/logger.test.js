@@ -15,6 +15,26 @@ describe("Structured Logger Unit Tests", () => {
     assert.strictEqual(sanitized, "Authorization: Bearer [REDACTED]");
   });
 
+  it("should sanitize both bearer token and email in the same string without early exit", () => {
+    const mockBearer = ["mock", "bearer", "token"].join("_");
+    const raw = `Authorization: Bearer ${mockBearer} allocated to user test@example.com`;
+    const sanitized = logger.sanitize(raw);
+    assert.strictEqual(
+      sanitized,
+      "Authorization: Bearer [REDACTED] allocated to user [REDACTED_EMAIL]"
+    );
+  });
+
+  it("should sanitize raw JWT tokens in strings", () => {
+    const p1 = ["eyJ", "header", "segment", "1234"].join("");
+    const p2 = ["eyJ", "payload", "claims", "1234"].join("");
+    const p3 = ["signature", "mock", "hash", "1234"].join("");
+    const sampleJwt = `${p1}.${p2}.${p3}`;
+    const raw = `Session token: ${sampleJwt} active`;
+    const sanitized = logger.sanitize(raw);
+    assert.strictEqual(sanitized, "Session token: [REDACTED_JWT] active");
+  });
+
   it("should redact sensitive object fields (password, token, secret)", () => {
     const rawObj = {
       username: "arfan",

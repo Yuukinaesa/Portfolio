@@ -58,7 +58,19 @@ describe("Health Check API (/api/hello) Unit Tests", () => {
     assert.strictEqual(res.headers["X-Content-Type-Options"], "nosniff");
   });
 
-  it("should return 405 Method Not Allowed on non-GET/HEAD request", () => {
+  it("should return 204 status on OPTIONS request for method discovery", () => {
+    const req = { method: "OPTIONS" };
+    const res = createMockResponse();
+
+    handler(req, res);
+
+    assert.strictEqual(res.statusCode, 204);
+    assert.strictEqual(res.ended, true);
+    assert.strictEqual(res.headers["Allow"], "GET, HEAD, OPTIONS");
+    assert.strictEqual(res.headers["X-Content-Type-Options"], "nosniff");
+  });
+
+  it("should return 405 Method Not Allowed on non-GET/HEAD/OPTIONS request", () => {
     const req = { method: "POST" };
     const res = createMockResponse();
 
@@ -66,6 +78,6 @@ describe("Health Check API (/api/hello) Unit Tests", () => {
 
     assert.strictEqual(res.statusCode, 405);
     assert.strictEqual(res.body.error, "Method Not Allowed");
-    assert.strictEqual(res.headers["Allow"], "GET, HEAD");
+    assert.strictEqual(res.headers["Allow"], "GET, HEAD, OPTIONS");
   });
 });
