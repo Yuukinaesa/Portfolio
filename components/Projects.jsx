@@ -12,7 +12,6 @@ import {
   saham,
   portsyncro,
   botpam,
-  ansible,
   mytools,
   automatetanium,
   snappatch,
@@ -36,15 +35,6 @@ const PROJECTS = [
       "Built a tool to automate vulnerability log parsing, patch downloads, and evidence reporting.",
     link: "#",
     tags: ["Vulnerability", "Patch Management", "Python"],
-  },
-  {
-    id: "ansible-log-parser",
-    imageSrc: ansible,
-    title: "Ansible Log Parser",
-    description:
-      "Developed a tool to parse Ansible logs and extract IP, credentials, and port status automatically.",
-    link: "https://logparser.arfan-hidayat-priyantono.workers.dev/",
-    tags: ["Python", "Ansible", "Automation", "Log Parser"],
   },
   {
     id: "mytools",

@@ -46,4 +46,13 @@ describe("Project Assets and Configuration Tests", () => {
     assert.ok(content.includes('id: "snappatch"'), "Should contain snappatch project id");
     assert.ok(content.includes('title: "SnapPatch"'), "Should contain SnapPatch title");
   });
+
+  it("should not contain Ansible Log Parser in components/Projects.jsx", () => {
+    const content = fs.readFileSync(projectsComponentFile, "utf8");
+    assert.strictEqual(
+      content.includes('id: "ansible-log-parser"'),
+      false,
+      "Ansible Log Parser should be removed from Projects.jsx"
+    );
+  });
 });
