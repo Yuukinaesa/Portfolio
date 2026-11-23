@@ -66,11 +66,11 @@ const Intro = ({ onExperienceClick, onProjectsClick }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              href="https://drive.google.com/file/d/1KyLse_TDYSWkkAT1FAvWTNo3WytOMU4g/view?usp=sharing"
+              href="https://drive.google.com/file/d/1DzRxgNOXdQkqp7OQblFnceLJEHXhdMNR/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-transparent text-primary font-medium text-sm px-4 py-2.5 rounded-md hover:bg-sky hover:border-sky hover:text-white focus:outline-none focus:ring-2 focus:ring-sky focus:ring-offset-2 focus:ring-offset-slate-900 inline-block transition-colors duration-200"
-              aria-label="View Arfan's Resume (opens in new tab)"
+              aria-label="View Arfan's Resume / Portfolio (opens in new tab)"
             >
               Resume
             </motion.a>
