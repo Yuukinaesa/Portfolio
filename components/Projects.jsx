@@ -149,7 +149,7 @@ const ProjectCard = ({ id, imageSrc, title, description, link, tags = [] }) => {
           <Image
             src={imageSrc}
             alt={`Screenshot of ${title} project`}
-            className="w-full rounded-md h-44 md:h-32 lg:h-20 md:w-44 lg:w-32 mb-4 md:border-solid md:border-2 md:border-slate-600 lg:hover:border-semidark"
+            className="w-full rounded-md object-cover flex-shrink-0 h-44 md:h-32 lg:h-20 md:w-44 lg:w-32 mb-4 md:mb-0 md:border-solid md:border-2 md:border-slate-600 lg:hover:border-semidark"
             width={176}
             height={128}
             loading="lazy"

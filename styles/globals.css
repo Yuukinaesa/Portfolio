@@ -27,11 +27,12 @@
   --font-title: var(--font-poppins), "Poppins", sans-serif;
 }
 
-/* Smooth scrolling for the whole page */
+/* Smooth scrolling and prevent horizontal viewport overflow */
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   scroll-padding-top: 2rem;
+  overflow-x: clip;
 }
 
 /* Improve text rendering */
@@ -39,6 +40,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
 }
 
 /* Focus-visible for keyboard-only users */

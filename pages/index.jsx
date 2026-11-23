@@ -120,14 +120,14 @@ export default function Home() {
 
       <main
         id="main-content"
-        className="bg-slate-900 px-2 md:px-10 font-body text-primary"
+        className="bg-slate-900 px-2 sm:px-4 md:px-10 font-body text-primary"
         role="main"
       >
         <Intro
           onExperienceClick={scrollToExperience}
           onProjectsClick={scrollToProjects}
         />
-        <div className="w-full mx-auto p-4">
+        <div className="w-full mx-auto p-2 sm:p-4">
           <section
             ref={experienceRef}
             id="experience"

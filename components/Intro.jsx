@@ -80,12 +80,12 @@ const Intro = ({ onExperienceClick, onProjectsClick }) => {
       {/* Header stop */}
 
       {/* About content */}
-      <div className="py-24 p-4">
+      <div className="py-16 md:py-24 px-2 sm:px-4">
         <motion.h1
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-xl md:text-5xl py-2 font-title font-bold text-primary"
+          className="text-2xl sm:text-3xl md:text-5xl py-2 font-title font-bold text-primary"
         >
           Arfan Hidayat Priyantono
         </motion.h1>
@@ -93,7 +93,7 @@ const Intro = ({ onExperienceClick, onProjectsClick }) => {
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-base md:text-2xl py-2 font-title font-medium text-slate-300"
+          className="text-sm sm:text-base md:text-2xl py-2 font-title font-medium text-slate-300"
         >
           Cyber Security Engineer — Building Automation Tools for Teams
         </motion.h2>
@@ -101,7 +101,7 @@ const Intro = ({ onExperienceClick, onProjectsClick }) => {
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="text-semidark leading-8 py-5 text-sm md:text-base tracking-wider"
+          className="text-semidark leading-relaxed md:leading-8 py-5 text-sm md:text-base tracking-wider max-w-2xl mx-auto"
         >
           A personal portfolio of my{" "}
           <button
@@ -140,7 +140,7 @@ const Intro = ({ onExperienceClick, onProjectsClick }) => {
                   rel="noopener noreferrer"
                   aria-label={ariaLabel}
                 >
-                  <span className="w-10 h-10 text-2xl inline-flex items-center justify-center hover:text-sky cursor-pointer hover:-translate-y-2 transition-all duration-300">
+                  <span className="w-11 h-11 text-2xl inline-flex items-center justify-center hover:text-sky cursor-pointer hover:-translate-y-2 transition-all duration-300">
                     <Icon aria-hidden="true" />
                   </span>
                 </motion.a>

@@ -62,7 +62,7 @@ const ExperienceItem = ({ id, name, url, position, date, dateStart, dateEnd }) =
   return (
     <article
       id={`experience-${id}`}
-      className="flex justify-between lg:px-10 mb-6"
+      className="flex flex-col sm:flex-row sm:justify-between sm:items-start lg:px-10 mb-6 gap-1 sm:gap-4"
     >
       <div className="flex flex-col">
         {url && url !== "#" ? (
@@ -82,7 +82,7 @@ const ExperienceItem = ({ id, name, url, position, date, dateStart, dateEnd }) =
         )}
         <span className="text-base text-semidark">{position}</span>
       </div>
-      <div className="flex flex-col text-right mt-1 flex-shrink-0 ml-4">
+      <div className="flex flex-col sm:text-right mt-1 sm:mt-0 flex-shrink-0 sm:ml-4">
         {/* Machine-readable dates for SEO and structured data (Schema.org compliance) */}
         <time
           className="text-sm text-semidark whitespace-nowrap"
